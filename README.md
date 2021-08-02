@@ -25,7 +25,7 @@ Note: please use python2 with `construct==2.9.45`. To quickly install `construct
 ### How can the tool be used
 This can be used both for security research and as part of an internal investigation to quickly scan many devices to retrieve their EtherNet/IP protocol stack. More reasons to use the tool:
 * Vulnerability research
-* Honeypot detection (for example [conpot](https://github.com/mushorg/conpot) which uses [CPPPO](https://github.com/pjkundert/cpppo) behind the scenes)
+* Honeypot detection (for example [conpot](https://github.com/mushorg/conpot) which uses [CPPPO](https://github.com/pjkundert/cpppo) behind the scenes, and [can be easily be detected](https://www.shodan.io/search?query=Serial+number%3A+0x006c061a))
 * Scan which devices are affected by some vulnerability in one of the EtherNet/IP protocol stacks* 
 
 ### How the tool works
