@@ -418,10 +418,10 @@ def cip_forward_open_request(bad_flags=False):
 
 	# Command Specific Data
 	command_specifc_data = b""
-	command_specifc_data += h2b("00 00 00 00")  					# 
-	command_specifc_data += h2b("ff 00")  							# Timeout
-	command_specifc_data += h2b("02 00")  							# Items count
-	command_specifc_data += h2b("00 00 00 00")  					# Item #1: Null address Item
+	command_specifc_data += h2b("00 00 00 00") 					# 
+	command_specifc_data += h2b("ff 00") 							# Timeout
+	command_specifc_data += h2b("02 00") 							# Items count
+	command_specifc_data += h2b("00 00 00 00") 					# Item #1: Null address Item
 	command_specifc_data += h2b("b2 00") + size2h(cip_data)			# Item #2: Unconnected Data Item
 	# ENIP RR data
 	overall_cip_data = command_specifc_data + cip_data
@@ -537,19 +537,19 @@ def main():
 			res = "RTAutomation (sig: '{}')".format(str_result)
 
 		elif str_result == "0010000110010111011":
-		 	res = "1756-EN2TR/A (sig: '{}')".format(str_result)
+			res = "Rockwell 1756-EN2TR/A (sig: '{}')".format(str_result)
 
 		elif str_result == "1000000010010111110":
-		 	res = "1756-L81E/B (sig: '{}')".format(str_result)
+			res = "Rockwell 1756-L81E/B (sig: '{}')".format(str_result)
 
 		elif str_result == "1000001110010110010":
-			res = "RSLinx (sig: '{}')".format(str_result)
+			res = "Rockwell RSLinx (sig: '{}')".format(str_result)
 
 		elif str_result == "0000000110010110010":
-			res = "LC20 (sig: '{}')".format(str_result)
+			res = "Rockwell LC 20/50 (sig: '{}')".format(str_result)
 
 		elif str_result == "0000010110100100000":
-			res = "CPPPO (Python) (sig: '{}')".format(str_result)
+			res = "CPPPO (e.g. conpot) (sig: '{}')".format(str_result)
 
 		elif str_result == "0000000110010111000":
 			res = "Rockwell 1763/1766 (sig: '{}')".format(str_result)
@@ -558,13 +558,13 @@ def main():
 			res = "Rockwell 1769 (sig: '{}')".format(str_result)
 
 		elif str_result == "0000010110010111011":
-			res = "SoftLogix5800 Emulator (sig: '{}')".format(str_result)
+			res = "Rockwell SoftLogix5800 Emulator (sig: '{}')".format(str_result)
 
 		elif str_result == "1000011110010110010":
-			res = "PanelView Plus (sig: '{}')".format(str_result)
+			res = "Rockwell PanelView Plus (sig: '{}')".format(str_result)
 
 		elif str_result == "0010010110010111011":
-			res = "SLC/PLC5 (sig: '{}')".format(str_result)
+			res = "Rockwell SLC/PLC5 (sig: '{}')".format(str_result)
 
 		elif str_result == "0000000010010111000":
 			res = "No-Name-Yet (sig: '{}')".format(str_result)

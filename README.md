@@ -8,13 +8,27 @@ python2 enip_stack_detector.py IP_ADDR
 Note: please use python2 with `construct==2.9.45`. To quickly install `construct==2.9.45` please use:
 `pip2 -m install construct==2.9.45 --user`
 
-### How does the tool can be used
+### Currently supported EtherNet/IP protocol stacks
+* RTAutomation EtherNet/IP Stack
+* CPPPO (e.g. conpot) EtherNet/IP Stack
+* OpENer Stack EtherNet/IP Stack
+* Rockwell 1756-EN2TR/A EtherNet/IP Stack
+* Rockwell 1756-L81E/B EtherNet/IP Stack
+* Rockwell RSLinx EtherNet/IP Stack
+* Rockwell LC 20/50 EtherNet/IP Stack
+* Rockwell 1763/1766 EtherNet/IP Stack
+* Rockwell 1769 EtherNet/IP Stack
+* Rockwell SoftLogix5800 Emulator EtherNet/IP Stack
+* Rockwell PanelView Plus EtherNet/IP Stack
+* Rockwell SLC/PLC5 EtherNet/IP Stack
+
+### How can the tool be used
 This can be used both for security research and as part of an internal investigation to quickly scan many devices to retrieve their EtherNet/IP protocol stack. More reasons to use the tool:
 * Vulnerability research
-* Honeypot detection (for example [conpot](https://github.com/mushorg/conpot))
+* Honeypot detection (for example [conpot](https://github.com/mushorg/conpot) which uses [CPPPO](https://github.com/pjkundert/cpppo) behind the scenes)
 * Scan which devices are affected by some vulnerability in one of the EtherNet/IP protocol stacks* 
 
-### How the tools works
+### How the tool works
 This tool performs behavioral profiling by breaking down the EtherNet/IP and CIP protocols to specific properties and attributes, which later creates a unique signature for the ENIP stack in use based on all the collected parameters. Supersetting all the unique implementation hints gives the true identity of the ENIP stack being used. A parameter can be any delicate attribute of the protocol and the implementation, for example, an attribute that determines whether a certain feature of the ENIP protocol is currently supported. Scanning two different devices that use the same core ENIP stack (e.g. an SDK purchased from the same vendor) will result with the same unique signature. 
 
 ### How Claroty uses this tool
