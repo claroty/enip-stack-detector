@@ -1,6 +1,10 @@
 # EtherNet/IP & CIP Stack Detector
 EtherNet/IP & CIP Stack Detector that can help both cyber-security researchers, OT engineers, and asset owners to identify devices that are running a specific EtherNet/IP protocol stack.
 
+![Alt Text](demo.gif)
+
+
+
 ### How to use the tool
 ```
 python2 enip_stack_detector.py IP_ADDR
