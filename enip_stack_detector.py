@@ -548,7 +548,7 @@ def main():
 		elif str_result == "0000000110010110010":
 			res = "Rockwell LC 20/50 (sig: '{}')".format(str_result)
 
-		elif str_result == "0000010110100100000":
+		elif str_result == "0000010110100100000" or str_result == "0000010110100111011":
 			res = "CPPPO (e.g. conpot) (sig: '{}')".format(str_result)
 
 		elif str_result == "0000000110010111000":
